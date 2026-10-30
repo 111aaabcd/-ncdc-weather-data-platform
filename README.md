@@ -86,7 +86,7 @@ Python 测试覆盖数据范围、月度唯一性、模型评估、SQLite、API 
 
 Hadoop Streaming 脚本已完成本地管道测试；仓库还提供 Hive 外部表、ORC 汇总查询、MySQL 建表与 Sqoop 导出脚本。**这些扩展尚未在真实 Hadoop/Hive/Sqoop 集群完成运行验证，不能视为已完成集群部署。**
 
-MySQL 密码通过 `WEATHER_DB_PASSWORD` 环境变量设置，不写入源码。默认 Django 密钥仅用于本地演示，服务默认只监听 `127.0.0.1`。
+MySQL 密码通过 `WEATHER_DB_PASSWORD` 环境变量设置，不写入源码。Django 密钥从 `DJANGO_SECRET_KEY` 环境变量读取；本地演示未设置时使用临时随机值。服务默认只监听 `127.0.0.1`。
 
 ## 数据与模型边界
 
